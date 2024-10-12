@@ -3,3 +3,6 @@ services:
     build: .
     ports:
       - 8080:8080
+    volumes:
+      - .:/app
+    command: ./mvnw spring-boot:run

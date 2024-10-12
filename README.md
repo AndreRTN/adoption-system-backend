@@ -17,4 +17,5 @@ Projeto de gestão de adoção de animais
   > - Abrindo o projeto em alguma IDE (IntelliJ) e clicando em run project 
           
 - > ### Docker compose (default) (necessário docker na máquina)
-  > - Rodar o comando: docker-compose up --build
+  > - Rodar o comando: docker-compose up --build (apenas na primeira vez, após isso subirá um container)
+  > - Qualquer alteração feita no projeto será atualizada no container, basta parar a aplicação e rodar novamente
