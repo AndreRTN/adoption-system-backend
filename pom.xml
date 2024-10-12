@@ -98,6 +98,12 @@
             <version>2.15.2</version> <!-- Use the appropriate version of Jackson -->
         </dependency>
 
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-docker-compose</artifactId>
+            <optional>true</optional>
+        </dependency>
+
 
     </dependencies>
 

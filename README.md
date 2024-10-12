@@ -12,5 +12,9 @@ Projeto de gestão de adoção de animais
 
 > ### Observações: 
 - > Para utilizar o swagger, executar o projeto e entrar na url: http://localhost:8080/swagger-ui.html
-- >### Docker
-  > 
+
+- >### Executando diretamente (Necessário Java 21 na máquina)
+  > - Abrindo o projeto em alguma IDE (IntelliJ) e clicando em run project 
+          
+- > ### Docker compose (default) (necessário docker na máquina)
+  > - Rodar o comando: docker-compose up --build
