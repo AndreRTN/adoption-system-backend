@@ -5,7 +5,6 @@ import com.challenge.adoption.type.AdoptionStatus;
 import com.challenge.adoption.type.AnimalCategory;
 import lombok.Data;
 
-import java.time.LocalDate;
 
 @Data
 public class AnimalPresenter {
@@ -20,7 +19,7 @@ public class AnimalPresenter {
 
     private AnimalCategory category;
 
-    private LocalDate birthDate;
+    private String birthDate;
 
     private Integer age;
 

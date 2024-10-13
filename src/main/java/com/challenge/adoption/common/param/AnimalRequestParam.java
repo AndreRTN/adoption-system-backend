@@ -3,12 +3,10 @@ package com.challenge.adoption.common.param;
 import com.challenge.adoption.type.AdoptionStatus;
 import com.challenge.adoption.type.AnimalCategory;
 import com.fasterxml.jackson.annotation.JsonFormat;
-import jakarta.validation.constraints.NotBlank;
 import jakarta.validation.constraints.NotEmpty;
 import jakarta.validation.constraints.NotNull;
 import jakarta.validation.constraints.Size;
 import lombok.Data;
-import org.springframework.format.annotation.DateTimeFormat;
 
 import java.time.LocalDate;
 

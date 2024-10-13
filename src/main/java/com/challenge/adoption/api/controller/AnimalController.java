@@ -28,6 +28,7 @@ public class AnimalController {
     }
 
     @GetMapping(value = "/{id}")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<AnimalPresenter> findAnimal(@PathVariable Long id) {
 
         return animalService.findById(id).map(ResponseEntity::ok)
@@ -35,11 +36,13 @@ public class AnimalController {
     }
 
     @GetMapping()
+    @CrossOrigin(origins = "*")
     public ResponseEntity<List<AnimalPresenter>> findAllAnimals() {
         return ResponseEntity.ok(animalService.findAll());
     }
 
     @PostMapping(value = "create")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<AnimalPresenter> createAnimal(@Valid @RequestBody AnimalRequestParam animal) {
 
         AnimalPresenter savedAnimal = animalService.save(animal);
@@ -51,6 +54,7 @@ public class AnimalController {
     }
 
     @PatchMapping("{id}/status")
+    @CrossOrigin(origins = "*")
     public ResponseEntity<?> updateAnimalStatus(@PathVariable Long id, @RequestBody AnimalUpdateStatusParam status) {
 
         AdoptionStatus statusEnum = AdoptionStatus.getStatusFromString(status.getStatus());

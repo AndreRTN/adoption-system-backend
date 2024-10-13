@@ -10,6 +10,7 @@ import org.springframework.beans.BeanUtils;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.time.format.DateTimeFormatter;
 import java.util.List;
 import java.util.Optional;
 
@@ -18,6 +19,7 @@ public class AnimalService {
 
 
     private final AnimalRepository animalRepository;
+    private final  static DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy");
 
     @Autowired
     public AnimalService(AnimalRepository animalRepository) {
@@ -55,6 +57,7 @@ public class AnimalService {
     private AnimalPresenter convertToPresenter(Animal animal) {
         AnimalPresenter presenter = new AnimalPresenter();
         BeanUtils.copyProperties(animal, presenter);
+        presenter.setBirthDate(formatter.format(animal.getBirthDate()));
         return presenter;
     }
 }
