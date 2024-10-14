@@ -92,6 +92,7 @@ class AnimalControllerTests {
     void it_should_return_found_animal() throws Exception {
         mapper.registerModule(new JavaTimeModule());
         Animal animal = new Animal();
+        animal.setBirthDate(LocalDate.now());
         animal.setName("Mock");
         AnimalPresenter presenter = new AnimalPresenter();
         presenter.setName(animal.getName());

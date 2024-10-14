@@ -32,6 +32,7 @@ class AnimalServiceTests  {
     public void when_save_animal_it_should_return_animal() {
         AnimalRequestParam requestParam = defaultAnimal();
         Animal animal = new Animal();
+        animal.setBirthDate(LocalDate.now());
         animal.setName("Mock");
         when(animalRepository.save(any(Animal.class))).thenReturn(animal);
 
@@ -45,6 +46,7 @@ class AnimalServiceTests  {
         AnimalRequestParam requestParam = defaultAnimal();
 
         Animal animal = new Animal();
+        animal.setBirthDate(LocalDate.now());
         animal.setName("Mock");
         when(animalRepository.findById(1L)).thenReturn(Optional.of(animal));
         when(animalRepository.save(any(Animal.class))).thenReturn(animal);
